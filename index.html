@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Number guessing game</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<style type="text/css">
-body{
- background: linear-gradient(to right, #81e691, black);
- font-family:Courier new,monospace;
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+body {
+background: linear-gradient(to right, darkred, darkblue, black);
+
 }
+#buttonDiv{ display:none;}
+#playDiv{display:none;}
+#easyInstruct {display:none;}
+#medInstruct {display:none;}
+#impInstruct {display:none;}
 </style>
+<title></title>
 </head>
 <body>
-<div class="container ">
-<div class="jumbotron font-weight-bold bg-light text-center"><h1 class="heading display-3">Number Guessing Game<br>...?¿...</h1></div>
-<p class="lead">Guess a number from <span id="min"></span> to <span id="max"></span></p>
-<input class="form-control" placeholder="Guess a number"id="numberGuess" type="number">
-<input class="form-control btn font-weight-bold btn-success" id="submit" type="button" value="GUESS">
+<div class="container">
+<div class="container text-light">
+<h2 class="heading display-3 text-center"><span class="text-danger">Rock</span>, <span class="text-primary">Paper</span> and <span class="text-dark">Scissors</span></h2>
+<p class="lead text-center font-weight-bold">Same Old game and it doesn't change...<br>.....Rock beats Scissors.....<br>
+.....Paper beats Rock......<br>....Scissors beats Paper.....
+</p>
+<div id="difficulty"> 
+<center><h3>Difficulty</h3></center>
 
-<center><a class="btn btn-dark" href="#">PLAY AGAIN</a></center>
-
-<p class="lead text-light text-center font-weight-bold" id="checkAnswer"></p>
+<button id="easy" class="btn btn-block btn-success font-weight-light">Easy</button>
+<button id="med"class="btn btn-block btn-warning font- weight-bold">Medium</button>
+<button id="impossible"class="btn btn-block btn-danger font-weight-bold">IMPOSSIBLE!!!</button>
 </div>
+
+</div>
+<br>
+<br>
+<br>
+<center><p class="display-5 font-weight-bold text-light" id="easyInstruct">Easy Mode<br>Best of 10</p></center>
+<center><p class="display-5 font-weight-bold text-light"id="medInstruct">Medium Mode <br>Best of 7</p></center>
+<center><p class="display-5 font-weight-bold text-light"id="impInstruct" >Impossible, You cant win<br>Best of 3</p></center>
+<center>
+<div id="buttonDiv"class="container">
+<button id="rock" class="btn btn-danger w-20">ROCK</button>
+<button id="paper"class="btn btn-primary w-20">PAPER</button>
+<button id="scissors" class="btn btn-dark w-20">SCISSORS</button>
+</div>
+</center>
+<br>
+<br>
+<center><div id="playDiv"><button id="playAgain"class="btn btn-dark">PLAY AGAIN</button></div></center>
+</div>
+<center><p id="answer"></p></center>
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="script.js" type="text/javascript"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
